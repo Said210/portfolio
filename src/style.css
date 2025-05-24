@@ -1,3 +1,4 @@
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -94,3 +95,73 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* src/style.css */
+body {
+  font-family: 'Inter', sans-serif; /* Example: If you want to use a specific sans-serif font from Google Fonts */
+  /* Ensure you import 'Inter' in your <head> or here if you use this */
+}
+
+/* Example of defining a skill tag style if you prefer not to repeat all Tailwind classes */
+.skill-tag {
+  @apply bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-medium shadow-sm;
+  /* Note: @apply only works if you have a Tailwind build process.
+     With CDN, you'd put all Tailwind classes in the HTML directly for these,
+     or define fully custom CSS here without @apply.
+     The HTML provided uses direct Tailwind classes for skill tags which is CDN-friendly.
+  */
+}
+
+/* Basic fade-in animation (if not using Tailwind's animation classes or for custom needs) */
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.animate-fade-in-down {
+  animation: fadeInDown 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out 0.2s forwards; /* Delay slightly */
+  opacity: 0; /* Start hidden before animation */
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out 0.4s forwards; /* Delay slightly */
+  opacity: 0; /* Start hidden */
+}
+
+/* Example for a subtle bounce on the hero button - you might need to adjust Tailwind JIT for CDN or define fully */
+.animate-bounce-λίγο { /* 'λίγο' means 'a little' in Greek, just a unique name */
+animation: bounce-subtle 2s infinite;
+}
+@keyframes bounce-subtle {
+0%, 100% {
+  transform: translateY(-3%);
+  animation-timing-function: cubic-bezier(0.8,0,1,1);
+}
+50% {
+  transform: translateY(0);
+  animation-timing-function: cubic-bezier(0,0,0.2,1);
+}
+}
+

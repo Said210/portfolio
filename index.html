@@ -1,13 +1,179 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diego S. Pelaez - Software Engineer & AI Innovator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css"> <style>
+        /* You can add very specific custom styles here or in style.css if Tailwind doesn't cover them */
+        /* For example, to ensure smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        .job-card ul { margin-left: 1.5rem; } /* Example custom tweak for lists in job cards */
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a2942 0%, #17203a 100%);
+        }
+        .skill-tag {
+            @apply px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800 font-sans">
+
+    <header id="hero" class="relative hero-gradient text-white sm:min-h-[10vh]">
+        <div class="container mx-auto px-6 pt-20 pb-32 md:pb-40 relative h-full">
+            <div class="flex flex-col md:flex-row items-start justify-end max-w-6xl mx-auto">
+                <div class="text-center md:text-left md:w-1/2 md:ml-auto pb-64 md:pb-0">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">
+                        Diego S. Pelaez
+                    </h1>
+                    <p class="text-xl md:text-2xl text-slate-300 mb-6">
+                        Senior Software Engineer | AI Project Innovator
+                    </p>
+                    <p class="text-lg text-slate-400 mb-8 max-w-xl mx-auto md:mx-0">
+                        Building intelligent solutions with clean code and AI innovation.
+                    </p>
+                    <a href="#ai-quick-wins" class="inline-block bg-sky-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-sky-700 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+            <img src="/images/me-2.png" alt="Diego S. Pelaez" 
+                class="absolute bottom-0 left-1/2 md:left-12 transform -translate-x-1/2 md:translate-x-0 w-64 md:w-72 h-auto max-w-full z-10">
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-white z-10" style="clip-path: polygon(0 100%, 100% 100%, 100% 0);"></div>
+    </header>
+
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-slate-800 mb-8">About Me</h2>
+            <div class="text-lg text-slate-700 space-y-4">
+                <p>
+                    With 8+ years in tech, I specialize in building scalable solutions and optimizing complex systems. My recent focus has been on integrating AI to create practical, impactful applications.
+                </p>
+                <p>
+                    I thrive on challenges that combine solid engineering with innovative AI applications. Let's build something remarkable together!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-quick-wins" class="py-16 px-6 bg-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 text-slate-800">Built and Enhanced with AI</h2>
+            <p class="text-lg text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+                Smart solutions powered by artificial intelligence
+            </p>
+            <div class="relative max-w-2xl mx-auto shadow-xl rounded-lg">
+                <div id="slider-content" class="overflow-hidden relative rounded-lg">
+                    <div class="p-6 text-center text-gray-500">Loading Projects...</div>
+                </div>
+                <button id="prev-slide" aria-label="Previous slide" class="absolute top-1/2 left-0 ml-[-15px] md:ml-[-25px] transform -translate-y-1/2 bg-slate-700 text-white p-3 rounded-full shadow-md hover:bg-slate-800 transition-colors z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                <button id="next-slide" aria-label="Next slide" class="absolute top-1/2 right-0 mr-[-15px] md:mr-[-25px] transform -translate-y-1/2 bg-slate-700 text-white p-3 rounded-full shadow-md hover:bg-slate-800 transition-colors z-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-16 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-slate-800">Experience</h2>
+            <div class="space-y-8">
+                <div class="job-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
+                        <h3 class="text-xl font-semibold text-sky-700">IC3 Software Engineer @ Blend</h3>
+                        <span class="text-slate-500 text-sm">2024 - Present</span>
+                    </div>
+                    <ul class="list-disc space-y-2 text-slate-600">
+                        <li>Enhanced spec suite reliability and product testing</li>
+                        <li>Led Twilio to Zoom video migration</li>
+                    </ul>
+                </div>
+
+                <div class="job-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
+                        <h3 class="text-xl font-semibold text-sky-700">Senior Full Stack Developer @ InfoTech</h3>
+                        <span class="text-slate-500 text-sm">2022 - 2024</span>
+                    </div>
+                    <ul class="list-disc space-y-2 text-slate-600">
+                        <li>Developed customer features with Stimulus JS</li>
+                        <li>Optimized PostgreSQL queries and ETL processes</li>
+                        <li>Built automated PDF report generation system</li>
+                    </ul>
+                </div>
+
+                <div class="job-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
+                        <h3 class="text-xl font-semibold text-sky-700">Manager, New Projects @ PerfumeGallery</h3>
+                        <span class="text-slate-500 text-sm">2018 - 2022</span>
+                    </div>
+                    <ul class="list-disc space-y-2 text-slate-600">
+                        <li>Led Shopify migration, increasing conversion by 50%</li>
+                        <li>Developed scalable sales and inventory system</li>
+                        <li>Managed tech team and strategic partnerships</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 px-6 bg-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-slate-800 mb-12">Skills</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-4">Core</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Ruby on Rails</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-4">Data & Cloud</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-sky-700 mb-4">Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-16 px-6 bg-slate-800 text-slate-300 text-center">
+        <div class="max-w-lg mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-6">Let's Connect</h2>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.linkedin.com/in/diego-s-pelaez/" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 transition-colors text-lg">LinkedIn</a>
+                <a href="https://github.com/Said210/" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 transition-colors text-lg">GitHub</a>
+                <a href="mailto:diego@pelaez.com.mx" class="text-sky-400 hover:text-sky-300 transition-colors text-lg">diego@pelaez.com.mx</a>
+            </div>
+            <p class="text-sm text-slate-500">&copy; <span id="currentYear"></span> Diego S. Pelaez</p>
+        </div>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
-  </body>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
 </html>
