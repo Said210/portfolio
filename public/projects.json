@@ -3,6 +3,18 @@
         "title": "Retros Against Humanity: AI Edition",
         "description": "Who says corporate retrospectives can't be as addictive as Cards Against Humanity? Turn your team meetings from awkward silence into the session everyone actually looks forward to – with custom AI-generated prompts that make even the quietest developers spill their honest thoughts! 🎯✨ Finally, an HR-approved way to make work meetings feel like game night.",
         "image_url": "/images/kanban.png",
-        "link": "https://retros.peleaz.com.mx"
+        "link": "https://retros.pelaez.com.mx"
+    },
+    {
+        "title": "Integrations.me",
+        "description": "Integrations.me is a small platform to monitor RSS feeds, so teams can be on top of changes of their API integrations and share them with your team.",
+        "image_url": "/images/integrations.me.png",
+        "link": "https://integrations.me"
+    },
+    {
+        "title": "Pelaez.com.mx",
+        "description": "Pelaez.com.mx is this page, nice huh?",
+        "image_url": "/images/pelaez.com.mx.png",
+        "link": "https://pelaez.com.mx"
     }
   ]
